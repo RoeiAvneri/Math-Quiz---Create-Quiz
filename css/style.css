@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300&display=swap');
+
+
+.container-input-request{
+    font-family: 'Nunito', sans-serif;
+    text-align: left;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    padding: 30px;
+    width: 30%;
+    margin: 20px auto;
+}
+.main-quiz-topic, .subtitle-topic{
+    text-align: center;
+    font-family: 'Nunito', sans-serif;
+}
+input, select{
+    outline: none;
+    padding:10px;
+    border:0;
+    box-shadow:0 0 15px 4px rgba(0,0,0,0.06);
+    margin: 10px
+}
+#requestion-data-form, #btn-menu{display:none}
+#send-start-data{
+    padding: 10px 50px;
+    background-color: #e6e6e6;
+    border: none;
+    border-radius: 0.2em;
+    font-size: 14px;
+    margin: 10px 0 10px 0px
+}
+table{
+    background-color: #fff;
+    border: 1px solid #dbdbdb;
+    color: #111;
+    padding: 10px;
+    text-align: center;
+}
+th, td{border: 1px solid #dbdbdb; padding: 13px; margin: -1px;}
+#error-not-fill-name{color: red; display: none; position: relative; top: -20px;}
+.timer-data{
+    padding: 10px 265px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 0px 29px 0px;
+}
+hr{color: lightblue}
+.btn-class-menu{
+    display: inline-flex;
+    height: 40px;
+    width: 143px;
+    border: 2px solid #adadad;
+    margin: 20px 20px 20px 20px;
+    color: #adadad;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: .8em;
+    letter-spacing: 1.5px;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    background-color: #fff;
+}
+a{
+    color: #6e6e6e;
+    text-decoration: none;
+    letter-spacing: 1px;
+}
+#button-ofmenu{
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+#button-ofmenu a{
+    position: relative;
+    transition: all .35s ease-Out;
+}
+#slide{
+    width: 100%;
+    height: 100%;
+    left: -200px;
+    background: #adadad;
+    position: absolute;
+    transition: all .35s ease-Out;
+    bottom: 0;
+}
+#button-ofmenu:hover #slide {
+    left: 0;
+}
+#button-ofmenu:hover a{
+    color: #2D3142;
+}
+#finish-game{
+    color: green;
+    font-size: 25px;
+    text-align: center;
+    display: none;
+    position: relative;
+    margin: 20px 0px 20px 0px
+}
+#score-opinion{
+    font-size: 18px;
+    text-align: center;
+    display: none;
+    position: relative;
+    top: -20px;
+}
+#score-right-wrong{
+    font-size: 14px;
+    text-align: center;
+    display: none;
+    position: relative;
+    top: -40px;
+}
+//Back:1
+#b1-nex{
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+#b1-nex a{
+    position: relative;
+    transition: all .35s ease-Out;
+}
+#b1-nex:hover #slide {
+    left: 0;
+}
+#b1-nex:hover a{
+    color: #2D3142;
+}

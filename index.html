@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/phone.css">
+    <link rel="icon" href="assest\image\icon.ico">
+    <title>Math Quiz</title>
+    <script src="js/main.js"></script>
+</head>
+<body>
+    <h1 class="main-quiz-topic">Math Quiz</h1>
+    <p class="subtitle-topic">Final Project Of Year Two</p>
+    <div class="container-input-request">
+            Enter Your Name <input type="text" class="input-request-name" id="name-re" placeholder="" required><br>
+            Enter Your Age <select id="input-request-age" style="margin-left: 23px">
+                                <option id="age-option" value="6-8">6-8</option>
+                                <option id="age-option" value="9-11">9-11</option>
+                                <option id="age-option" value="12-14">12-14</option>
+                            </select><br>
+            Choosse Difficulty Level <input type="radio" class="input-request-difficult" id="dif1" name="difficulty-level" value="*" checked="checked"> * 
+                                        <input type="radio" class="input-request-difficult" id="dif2" name="difficulty-level" value="**"> **
+                                        <input type="radio" class="input-request-difficult" id="dif3" name="difficulty-level" value="***"> ***
+
+            <br><input type="submit" class="input-final-btn" id="send-start-data" value="Start" onclick="createTable()">
+            <p id="error-not-fill-name">Enter You Name!</p><br>
+            <div id="table-ofdata"></div><br>
+        <span class="timer-data" id="timer">0s</span>
+        <br><br><div class="requestion-data-form" id="requestion-data-form">
+            <h1 id="question-of"></h1>
+            <br><hr>
+            <span id="question">
+                <input type="radio" class="input-request-answer" id="op1" name="answer-select" value=""> <label for="radio" id="optionOne">A</label><br>
+                <input type="radio" class="input-request-answer" id="op2" name="answer-select" value=""> <label for="radio" id="optionTwo">B</label><br>
+                <input type="radio" class="input-request-answer" id="op3" name="answer-select" value=""> <label for="radio" id="optionThree">C</label><br>
+                <input type="radio" class="input-request-answer" id="op4" name="answer-select" value=""> <label for="radio" id="optionFour">D</label><br>
+            </span>
+            <span id="finish-game">You Finish The Quiz</span>
+            <span id="score-opinion">NULL</span>
+            <span id="score-right-wrong">Answered correctly 0/10</span>
+            
+            <hr>
+        </div>
+        <div class="btn-menu" id="btn-menu">
+            <button class="btn-class-menu" id="button-ofmenu" onclick="startTimer()"><a href="#">Start Timer</a></button>
+            <button class="btn-class-menu" id="b1-che-btn" onclick="check()"><a href="#" id="check-btn-text">Check</a></button>
+            <button class="btn-class-menu" id="b1-nex" onclick="nextAndLoad()" disabled="true"><a href="#">Next Question</a></button>
+        </div>
+    </div><br>
+    
+    <div class="container-input-request" id="container-input-request" style="display: none">
+        <table class="table-fill">
+            <thead>
+                <tr>
+                    <th class="text-left"></th>
+                    <th class="text-left">Question</th>
+                    <th class="text-left">Correct Answer</th>
+                    <th class="text-left">Answer Right</th>
+                </tr>
+            </thead>
+            <tbody class="table-hover">
+                <tr>
+                    <td class="text-left">1.</td>
+                    <td class="text-left" id="1Question">$ 50,000.00</td>
+                    <td class="text-left" id="1answerCur">January</td>
+                    <td class="text-left" id="1answerRight">$ 50,000.00</td>
+                </tr>
+                <tr>
+                    <td class="text-left">2.</td>
+                    <td class="text-left" id="2Question">$ 10,000.00</td>
+                    <td class="text-left" id="2answerCur">January</td>
+                    <td class="text-left" id="2answerRight">$ 50,000.00</td>
+                </tr>
+                <tr>
+                    <td class="text-left">3.</td>
+                    <td class="text-left" id="3Question">$ 85,000.00</td>
+                    <td class="text-left" id="3answerCur">January</td>
+                    <td class="text-left" id="3answerRight">$ 50,000.00</td>
+                </tr>
+                <tr>
+                    <td class="text-left">4.</td>
+                    <td class="text-left" id="4Question">$ 56,000.00</td>
+                    <td class="text-left" id="4answerCur">January</td>
+                    <td class="text-left" id="4answerRight">$ 50,000.00</td>
+                </tr>
+                <tr>
+                    <td class="text-left">5.</td>
+                    <td class="text-left" id="5Question">$ 98,000.00</td>
+                    <td class="text-left" id="5answerCur">January</td>
+                    <td class="text-left" id="5answerRight">$ 50,000.00</td>
+                </tr>
+                <tr>
+                    <td class="text-left">6.</td>
+                    <td class="text-left" id="6Question">$ 50,000.00</td>
+                    <td class="text-left" id="6answerCur">January</td>
+                    <td class="text-left" id="6answerRight">$ 50,000.00</td>
+                </tr>
+                <tr>
+                    <td class="text-left">7.</td>
+                    <td class="text-left" id="7Question">$ 10,000.00</td>
+                    <td class="text-left" id="7answerCur">January</td>
+                    <td class="text-left" id="7answerRight">$ 50,000.00</td>
+                </tr>
+                <tr>
+                    <td class="text-left">8.</td>
+                    <td class="text-left" id="8Question">$ 85,000.00</td>
+                    <td class="text-left"id="8answerCur">January</td>
+                    <td class="text-left" id="8answerRight">$ 50,000.00</td>
+                </tr>
+                <tr>
+                    <td class="text-left">9.</td>
+                    <td class="text-left" id="9Question">$ 56,000.00</td>
+                    <td class="text-left" id="9answerCur">January</td>
+                    <td class="text-left" id="9answerRight">$ 50,000.00</td>
+                </tr>
+                <tr>
+                    <td class="text-left">10.</td>
+                    <td class="text-left" id="10Question">$ 98,000.00</td>
+                    <td class="text-left" id="10answerCur">January</td>
+                    <td class="text-left" id="10answerRight">$ 50,000.00</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+
+    <div class="container-input-request" id="container-input-request-b1" style="display: none">
+        <table class="table-fill" style="width:100%">
+            <thead>
+                <tr>
+                    <th class="text-left">Right Answer</th>
+                    <th class="text-left">Left Time</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="text-left" id="rightanswer" style="width:50%"></td>
+                    <td class="text-left" id="lefttimer" style="width:50%">0s</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
