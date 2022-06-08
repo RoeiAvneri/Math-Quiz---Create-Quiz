@@ -2,11 +2,14 @@
     .container-input-request{
         width: 80%;
     }
+    .form-group-data-time{
+        text-align: center
+    }
     .timer-data{
-        padding: 10px 140px!important;
+        padding: 10px 150px!important;
     }
     .input-request-name{
-        width: 55%
+        width: 45%!important
     }
     input[type="radio"]{
         margin: 1px
@@ -22,6 +25,34 @@
 }
 @media only screen and (max-width: 1600px) {  
     .timer-data{
-        padding: 10px 205px;
+        padding: 10px 100px;
+    }
+    .form-group-data-time{
+        text-align: center
+    }
+    .input-request-name{
+        width: 40%!important;
+    }
+}
+@media only screen and (max-width: 800px) {  
+    .timer-data{
+        padding: 10px 130px!important;
+    }
+    .form-group-data-time{
+        text-align: center
+    }
+    .input-request-name{
+        width: 40%!important;
+    }
+}
+@media only screen and (max-width: 1000px) {  
+    .timer-data{
+        padding: 10px 140px!important;
+    }
+    .form-group-data-time{
+        text-align: center
+    }
+    .input-request-name{
+        width: 40%!important;
     }
 }
