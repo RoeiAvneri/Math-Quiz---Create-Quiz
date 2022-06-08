@@ -103,6 +103,9 @@ a{
     position: relative;
     top: -20px;
 }
+.form-group-data-time{
+    margin-bottom: -20px;
+}
 #score-right-wrong{
     font-size: 14px;
     text-align: center;
