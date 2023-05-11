@@ -41,7 +41,7 @@ After finishing the quiz, the score and the correct answers will be displayed on
 
 ## Authors
 
-- John Doe - [john-doe](https://github.com/john-doe)
+- Roei Avneri - [roei avneri](https://github.com/RoeiAvneri)
 
 ## License
 
